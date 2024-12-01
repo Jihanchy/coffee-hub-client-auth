@@ -9,15 +9,15 @@ const Login = () => {
         const email = form.email.value;
         const password = form.password.value;
         const user = { email, password }
-        console.log(user)
+        // console.log(user)
         signInUser(email, password)
             .then(result => {
-                console.log(result.user)
+                // console.log(result.user)
 
                 // update last sign in time
                 const lastSignInTime = result?.user?.metadata?.lastSignInTime;
                 const loginInfo = { email, lastSignInTime }
-                fetch('http://localhost:5000/users', {
+                fetch('https://v1-coffee-store-server-phi.vercel.app/users', {
                     method: 'PATCH',
                     headers: {
                         'content-type': "application/json"
@@ -26,7 +26,7 @@ const Login = () => {
                 })
                     .then(res => res.json())
                     .then(data => {
-                        console.log(data)
+                        // console.log(data)
                     })
             })
             .catch(error => {

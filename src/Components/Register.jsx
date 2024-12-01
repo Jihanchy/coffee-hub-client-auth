@@ -10,13 +10,13 @@ const Register = () => {
         const email = form.email.value;
         const password = form.password.value;
         const user = { name, email, password }
-        console.log(user)
+        // console.log(user)
         createUser(email, password)
             .then(result => {
                 const createdAt = result?.user?.metadata?.creationTime
                 const newUser = { name, email, createdAt }
-                console.log(result.user)
-                fetch('http://localhost:5000/users', {
+                // console.log(result.user)
+                fetch('https://v1-coffee-store-server-phi.vercel.app/users', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json'
@@ -25,11 +25,11 @@ const Register = () => {
                 })
                     .then(res => res.json())
                     .then(data => {
-                        console.log(data)
+                        // console.log(data)
                     })
             })
             .catch(error => {
-                console.log(error.message)
+                // console.log(error.message)
             })
     }
     return (

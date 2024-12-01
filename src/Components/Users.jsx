@@ -17,12 +17,12 @@ const Users = () => {
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/users/${_id}`, {
+                fetch(`https://v1-coffee-store-server-phi.vercel.app/users/${_id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())
                     .then(data => {
-                        console.log(data)
+                        // console.log(data)
                         Swal.fire({
                             title: "Deleted!",
                             text: "Your file has been deleted.",
