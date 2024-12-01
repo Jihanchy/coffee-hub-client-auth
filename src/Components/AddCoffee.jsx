@@ -121,7 +121,7 @@ const AddCoffee = () => {
                                     <input type="text" name='photo' placeholder="Enter Coffee Photo URL" className="input w-full input-bordered" />
                                 </label>
                             </div>
-                            <button className='btn w-full my-5 bg-[#D2B48C]'>Add Coffee</button>
+                            <button className='btn w-full my-5 bg-[#D2B48C] text-white'>Add Coffee</button>
                         </div>
                     </form>
 

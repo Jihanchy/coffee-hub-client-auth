@@ -13,7 +13,7 @@ const [coffees,setSingleCoffee] = useState(loadedCoffees)
         <div className='text-center space-y-2'>
           <p>---slip & savour---</p>
           <h3 className='text-3xl font-semibold'>Our popular products</h3>
-          <button className='btn btn-sm rounded-sm bg-[#D2B48C]'><Link to='/addCoffee'>Add Coffee</Link></button>
+          <button className='btn btn-sm rounded-sm bg-[#D2B48C] text-white'><Link to='/addCoffee'>Add Coffee</Link></button>
         </div> 
         <div className='grid grid-cols-1 md:grid-cols-2 gap-5 w-11/12 mx-auto pt-5'>
             {
